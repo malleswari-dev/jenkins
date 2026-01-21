@@ -5,39 +5,24 @@ pipeline {
         }
     }
 
-    environment {
-        COURSE = "Jenkins"
-    }
-
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh """
-                        echo "Building"
-                        echo $COURSE
-                    """
-                }
+                echo "Building"
             }
         }
 
         stage('Test') {
             steps {
-                script {
-                    sh """
-                        echo "Testing"
-                    """
-                }  
+                echo "testing"
+                
             }
         }
 
         stage('Deploy') {
             steps {
-                script {
-                    sh """
-                        echo "Deploying"
-                    """
-                }  
+                echo "Deploying"
+                
             }
         }
     }
@@ -59,3 +44,4 @@ pipeline {
         }
     }
 }
+
